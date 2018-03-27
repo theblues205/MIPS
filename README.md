@@ -1,3 +1,3 @@
-# Vuong Quang Huy
-  K60DA
-  MSV: 15022245
+ Vuong Quang Huy
+ K60DA
+ MSV: 15022245
