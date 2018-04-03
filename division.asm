@@ -6,9 +6,9 @@
 
 ################### Data segment ###################
 .data
-prompt:	.asciiz     "Please enter x,y \n"
-result1:	.asciiz     "(4x+5)/y =  "
-result2:  .asciiz     "\n Remainder = "
+prompt:  .asciiz     "Please enter x,y \n"
+result1: .asciiz     "(4x+5)/y =  "
+result2: .asciiz     "\n Remainder = "
 ################### Code segment ###################
 .text
 .globl main
@@ -31,14 +31,14 @@ main:
       
       addu  $t0,$t0,$t2   # calculate (4x + 5) and store into $t0
      
-      div    $t0,$t1      # calculate (4x + 5)/y  (division with overflow, set LO to quotient and HI to remainder )
+      div   $t0,$t1       # calculate (4x + 5)/y  (division with overflow, set LO to quotient and HI to remainder )
   
           
       
-      mflo $s0     #  get quotient and store into $s0
-      mfhi $s1     #  get remainder and store into $s1 
+      mflo  $s0           #  get quotient and store into $s0
+      mfhi  $s1           #  get remainder and store into $s1 
       
-      la    $a0,result1    # write quotient message
+      la    $a0,result1   # write quotient message
       li    $v0,4
       syscall
       
